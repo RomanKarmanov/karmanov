@@ -44,31 +44,30 @@
     height: 140px;
     width: 140px;
     border-radius: 50%;
-}
-.author_name {
+    &_name {
     margin-top: 20px;
     color: #fff;
     font-family: 'Roboto', Helvetica, sans-serif;
     font-size: 28px;
     font-weight: 500;
-}
-.author_text {
+    }
+    &_text {
     margin-top: 10px;
     color: #fff;
     font-family: 'Roboto', Helvetica, sans-serif;
     font-size: 16px;
     font-weight: 400;
+    }
 }
 .welcome_social {
     display: flex;
     height: 100px;
     justify-content: center;
     align-items: center;
-}
-.link_social {
-    margin-right: 20px;
-    &:last-child {
-        margin-right: 0px;
+    &_block {
+        display: flex;
+        justify-content: space-between;
+        width: 140px;
     }
 }
 .social {
@@ -106,11 +105,13 @@
         border: none;
     }
 }
-.footer_author {
+.made_author {
     position: absolute;
     bottom: 40px;
     width: 100%;
     text-align: center;
+}
+.footer_author {
     color: #fff;
     font-family: 'Roboto', Helvetica, sans-serif;
     font-size: 16px;

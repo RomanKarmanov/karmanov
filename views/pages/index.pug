@@ -7,24 +7,15 @@ block content
   .welcome
     a.welcome_btn(href="#") Авторизоваться
     .welcome_block
-      .welcome_content
-        img.author(alt="author" src="images/content/author.jpg")
-        .author_name Роман Карманов
-        .author_text Личный сайт веб разработчика
+      .author_block
+        include ../common/author.pug
       .welcome_social
-        a.link_social(href="#")
-          svg.social
-            use(xlink:href="images/icons/sprite.svg#vk")
-        a.link_social(href="#")
-          svg.social
-            use(xlink:href="images/icons/sprite.svg#github")
-        a.link_social(href="#")
-          svg.social
-            use(xlink:href="images/icons/sprite.svg#in")
+        include ../common/social.pug
       .welcome_link_block
         a.link(href="#") Мои работы
         a.link(href="#") Обо мне
         a.link(href="#") Блог
-    .footer_author © Роман Карманов | создано с любовью в LoftSchool | 2018
+    .made_author
+      include ../common/made_author.pug
       
 
