@@ -1,0 +1,32 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'My works'
+  - var name = 'Роман Карманов'
+  - var text = 'Личный сайт веб разработчика'
+
+block content
+ section.works_block
+    .social_block
+      include ../common/social.pug
+    .about_author
+      include ../common/author.pug
+    svg.burger_block
+      use(xlink:href="images/icons/sprite.svg#hamburger")
+    .arrow_block.arrow_block-works
+      svg.arrow
+        use(xlink:href="images/icons/sprite.svg#arrow_down")
+    svg.triangles.triangles-works(viewBox="0 0 1200 240" preserveAspectRatio="xMinYMax")
+          polygon.triangleBlog(points="0,0 0,100000 601,108 601,105")
+          polygon.triangleBlog(points="1200,0 1200,100000 599,108 599,105")
+ section.my_work
+    .site_school
+      .site_school_block
+        h2.site Сайт школы онлайн образования
+        .discipline HTML, CSS, JAVASCRIPT
+        .link_site_btn
+          svg.link_svg
+            use(xlink:href="images/icons/sprite.svg#link")
+          .link_text Посмотреть сайт
+    .my_work_slider
+      
