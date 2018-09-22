@@ -4,7 +4,7 @@ block variables
   - var title = 'About me'
 
 block content
-  .about_block
+  section.about_block
     .social_block
       include ../common/social.pug
     .about_author
@@ -14,28 +14,96 @@ block content
     .arrow_block
       svg.arrow
         use(xlink:href="images/icons/sprite.svg#arrow_down")
-  .about_content
+  section.about_content
     .left_block
+      svg.svg_triangle_left
+        polygon(points="0,160 0,5 1060,160" fill="#f2f0e8")
       .left_block_content
         .about_me
-          .about_me_text ОБО МНЕ
+          .about_me_block
+            img.star_img(src="../../images/bg/stars2.png", alt="star")
+            .about_me_text ОБО МНЕ
         .who_i
           .avatar_block
-            img(src="images/content/author_more.jpg", alt="avatar")
-          .avatar_caption КТО Я
-          .avatar_text 
-          | Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-          | Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+            img.avatar_img(src="images/content/author_more.jpg", alt="avatar")
+            .avatar_caption_block  
+              .avatar_caption КТО Я
+            .avatar_text
+            | Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+            | Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
     .right_block
-      .my_skill Чем я могу быть вам полезен
+      svg.svg_triangle_right
+        polygon(points="-115,160 1050,0 1050,160" fill="#eae8e2")
+      .my_skill  
+        .my_skill_i Чем я могу быть вам полезен
       .my_skill_text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-      .my_skill_block 
-        .frontend_block
-          .name_skill_block Frontend
-          .skill_block
-        .backend_block
-          .name_skill_block Backend
-          .skill_block
-        .workflow_block
-          .name_skill_block WorkFlow
-          .skill_block
+      .my_skill_block
+        ul.my_skill_list
+          -
+            var skills = [
+              ['Frontend', ['Html', 'css', 'JavaScript']],
+              ['Backend', ['Php', 'mySQL', 'Node.js & npm', 'Mongo.db']],
+              ['Workflow',['Git', 'Gulp', 'Webpack']],
+            ] 
+          each item in skills
+            li.my_skill_item
+              .skill_block
+                .skill_titel #{item[0]}
+                ul.skill_list
+                  each skill in item[1]
+                    li.skill_elem
+                      svg.skill(viewBox='0 0 100 100' preserveAspextRatio='none') #{skill}
+                        circle(cx='50' cy='50' r='40' class='circle circle_under')
+                        circle(cx='50' cy='50' r='40' class='circle circle_tracing')
+  section.contact
+    .map_block#map
+    .contact_block
+      .contact_titel Контакты
+      ul.contact_list
+        li.contact_item
+          svg.svg_contact
+            use(xlink:href="images/icons/sprite.svg#skype")
+          .text_contact way-g5524
+        li.contact_item
+          svg.svg_contact
+            use(xlink:href="images/icons/sprite.svg#phone")
+          .text_contact +79042057113
+        li.contact_item
+          svg.svg_contact
+            use(xlink:href="images/icons/sprite.svg#envelope_n")
+          .text_contact way_g@mail.ru
+        li.contact_item
+          svg.svg_contact
+            use(xlink:href="images/icons/sprite.svg#map_marker")
+          .text_contact Сосногорск, 6 микрорайон, д. 1
+    footer.footer
+      ul.footer_block
+        li.footer_elem
+          .footer_text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+        li.footer_elem
+          .footer_elem_center
+            .footer_nav
+              nav.nav
+                ul.nav_list
+                  li.nav_point
+                    a.nav_link(href='#') Мои работы
+                  li.nav_point
+                    a.nav_link(href='#') Обо мне
+                  li.nav_point
+                    a.nav_link(href='#') Блог
+                  li.nav_point
+                    a.nav_link(href='#') Авторизация
+            .footer_social
+              include ../common/social.pug
+        li.footer_elem
+          .footer_contact
+            ul.footer_contact
+              li.footer_contact_item way-g5524
+              li.footer_contact_item +79042057113
+              li.footer_contact_item way_g@mail.ru
+              li.footer_contact_item Сосногорск, 6 микрорайон, д. 1
+      .footer_copyright
+        include ../common/made_author.pug
+
+
+

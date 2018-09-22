@@ -38,7 +38,7 @@
     bottom: 70px;
     width: 100%;
     text-align: center;
-    
+    z-index: 1;
 }
 .arrow {
     fill: #adadb2;
@@ -46,41 +46,22 @@
     height: 18px;
     cursor: pointer;
 }
-.about_content {
+.skill_list {
     display: flex;
 }
-.left_block {
-    width: 50%;
-    background-color: #f2f0e8;
-    &_content {
-        display: flex;
-        justify-content: space-between;
-    }
+.skill {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    transform: rotate(-90deg);
 }
-
-.about_me {
-    background: url(../../images/bg/stars2.png) center center/cover no-repeat;
-    width: 280px;
-    height: 180px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 75px;
+.circle {
+    fill:transparent;
+    stroke-width: 10px;
+    stroke: #dfdcd5;
 }
-.who_i {
-    width: 50%;
-}
-.avatar_block {
-    margin-right: 20px;
-    width: 100%;
-    height: 390px;
-    text-align: center;
-}
-.avatar_caption {
-    text-align: center;
-}
-.right_block {
-    width: 50%;
-    background-color: #eae8e2;
+.circle_tracing {
+    stroke: #165ad1;
+    stroke-dasharray: 251;
+    stroke-dashoffset: 251;
 }

@@ -7,12 +7,12 @@ html(lang="ru")
     meta(charset="utf-8")
     meta(content="ie=edge" http-equiv="x-ua-compatible")
     meta(content="width=device-width, initial-scale=1" name="viewport")
-    
+    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
     title #{title}
 
     link(rel='stylesheet' href='/styles/main.min.css')
   body
     .wrapper
       block content
-    script(src='/scripts/main.bundle.js')
     
+    script(src='/scripts/main.bundle.js')

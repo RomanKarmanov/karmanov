@@ -1,0 +1,90 @@
+.about_content {
+    display: flex;
+    height: 100vh;
+}
+.left_block {
+    position: relative;
+    width: 50%;
+    background-color: #f2f0e8;
+    &_content {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.svg_triangle_left {
+    position: absolute;
+    width: 100%;
+    top:-15.5%;
+}
+.about_me {
+    width: 100%;
+    &_block {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+    &_star {
+    background: url() center center/cover no-repeat;
+    }
+    &_text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.star_img {
+    width: 280px;
+    height: 180px;
+}
+.who_i {
+    width: 50%;
+}
+.avatar_block {
+    margin-right: 50px;
+}
+.avatar_img {
+    width: 440px;
+    height: 390px;
+}
+.avatar_caption_block {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.avatar_caption {
+    margin-top: 40px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    width: 90px;
+    border-bottom: 3px solid #9c9d9f;
+}
+.avatar_text {
+
+}
+.right_block {
+    width: 50%;
+    background-color: #eae8e2;
+    position: relative;
+}
+.svg_triangle_right {
+    width: 100%;
+    position: absolute;
+    top:-15.5%;
+}
+.my_skill {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    &_i {
+    border-bottom: 3px solid #9c9d9f;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    }
+    
+}
+.my_skill_text {
+    
+}
