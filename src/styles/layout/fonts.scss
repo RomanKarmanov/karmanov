@@ -8,6 +8,14 @@
   font-style: normal;
   font-display: block;
 }
+@font-face {
+  font-family: 'Sansus';
+  src: url('/fonts/SansusWebissimo.woff') format('woff'), 
+  url('/fonts/Sansus-Webissimo-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
 
 @mixin bernier() {
   font-family: 'bernier', Times, serif;

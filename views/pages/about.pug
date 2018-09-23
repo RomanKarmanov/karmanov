@@ -16,28 +16,25 @@ block content
     .arrow_block
       svg.arrow
         use(xlink:href="images/icons/sprite.svg#arrow_down")
+    svg.triangles(viewBox="0 0 1200 108" preserveAspectRatio="xMinYMax")
+            polygon.triangle_left(points="0,0 0,108 601,108 601,105" fill="#f2f0e8")
+            polygon.triangle_right(points="1200,0 1200,108 599,108 599,105" fill="#eae8e2")
   section.about_content
     .left_block
-      svg.svg_triangle_left
-        polygon(points="0,160 0,5 1060,160" fill="#f2f0e8")
       .left_block_content
         .about_me
           .about_me_block
-            img.star_img(src="../../images/bg/stars2.png", alt="star")
+            img.star_img(src="../../images/bg/stars2_about.png", alt="star")
             .about_me_text ОБО МНЕ
         .who_i
           .avatar_block
             img.avatar_img(src="images/content/author_more.jpg", alt="avatar")
             .avatar_caption_block  
               .avatar_caption КТО Я
-            .avatar_text
-            | Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-            | Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+            .avatar_text Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
     .right_block
-      svg.svg_triangle_right
-        polygon(points="-115,160 1050,0 1050,160" fill="#eae8e2")
       .my_skill  
-        .my_skill_i Чем я могу быть вам полезен
+        .my_skill_i ЧЕМ Я МОГУ БЫТЬ ВАМ ПОЛЕЗЕН
       .my_skill_text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
       .my_skill_block
         ul.my_skill_list
@@ -55,12 +52,13 @@ block content
                   each skill in item[1]
                     li.skill_elem
                       svg.skill(viewBox='0 0 100 100' preserveAspextRatio='none') #{skill}
-                        circle(cx='50' cy='50' r='40' class='circle circle_under')
-                        circle(cx='50' cy='50' r='40' class='circle circle_tracing')
+                        circle(cx='50' cy='50' r='35' class='circle circle_under')
+                        circle(cx='50' cy='50' r='35' class='circle circle_tracing')
   section.contact
     .map_block#map
     .contact_block
-      .contact_titel Контакты
+      .contact_block_elem
+        .contact_titel КОНТАКТЫ
       ul.contact_list
         li.contact_item
           svg.svg_contact

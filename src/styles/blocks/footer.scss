@@ -17,6 +17,10 @@
 .footer_text {
     margin: 30px 30px;
     color: #fff;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
 }
 .footer_elem_center {
     border-left: 1px solid #494c54;
@@ -37,6 +41,10 @@
     text-decoration: none;
     color: #fff;
     margin-right: 40px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 16px;
 }
 .footer_social {
     margin-top: 30px;
@@ -54,6 +62,10 @@
 .footer_contact_item {
     margin-bottom: 5px;
     color:#fff;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
     &:last-child {
         margin-bottom: 0px;
     }
@@ -65,4 +77,8 @@
     justify-content: center;
     align-items: center;
     background-color: #083c96;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
 }
